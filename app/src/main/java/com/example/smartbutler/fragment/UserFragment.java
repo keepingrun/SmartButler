@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.smartbutler.R;
 import com.example.smartbutler.entity.MyUser;
+import com.example.smartbutler.ui.CourierActivity;
 import com.example.smartbutler.ui.LoginActivity;
 import com.example.smartbutler.utils.L;
 import com.example.smartbutler.utils.ShareUtils;
@@ -58,6 +59,8 @@ public class UserFragment extends Fragment implements View.OnClickListener{
     private Button btn_camera;
     private Button btn_picture;
     private Button btn_cancel;
+
+    private TextView tv_courier;
 
     @Nullable
     @Override
@@ -102,6 +105,9 @@ public class UserFragment extends Fragment implements View.OnClickListener{
         btn_camera.setOnClickListener(this);
         btn_picture.setOnClickListener(this);
         btn_cancel.setOnClickListener(this);
+
+        tv_courier=view.findViewById(R.id.tv_courier);
+        tv_courier.setOnClickListener(this);
 
     }
     private void setEnabled(boolean b){
@@ -180,6 +186,9 @@ public class UserFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.btn_camera:
                 toCamera();
+                break;
+            case R.id.tv_courier:
+                startActivity(new Intent(getActivity(), CourierActivity.class));
                 break;
         }
     }

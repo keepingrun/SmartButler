@@ -21,4 +21,7 @@
     <string name="cancel">取消</string>
     <string name="photo">图库</string>
     <string name="take_photo">拍照</string>
+    <string name="Inquire">查询</string>
+    <string name="Courier_company">快递公司</string>
+    <string name="Courier_number">快递单号</string>
 </resources>

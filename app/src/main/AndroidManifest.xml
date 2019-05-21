@@ -51,6 +51,9 @@
             android:label="设置"/>
         <activity android:name=".ui.ForgetPassWordActivity"
             android:label="修改密码"/>
+        <!--快递查询-->
+        <activity android:name=".ui.CourierActivity"
+            android:label="快递查询"/>
     </application>
 
 </manifest>
