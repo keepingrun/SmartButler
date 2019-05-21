@@ -1,0 +1,27 @@
+<resources
+    xmlns:tools="http://schemas.android.com/tools"  tools:ignore="MissingTranslation">
+    <string name="app_name">SmartButler</string>
+    <string name="title_name1">管家服务</string>
+    <string name="title_name2">微信精选</string>
+    <string name="title_name3">美女社区</string>
+    <string name="title_name4">个人中心</string>
+    <string name="text_setting">设置</string>
+    <string name="text_user_name">用户名</string>
+    <string name="text_age">年龄</string>
+    <string name="text_desc">简介</string>
+    <string name="text_girl_f">女</string>
+    <string name="text_boy">男</string>
+    <string name="et_pass">密码</string>
+    <string name="text_password_again">再输入一次</string>
+    <string name="text_email">邮箱</string>
+    <string name="text_register_remind">注册成功需要前往邮箱验证，否则无法登录！</string>
+    <string name="text_registered">注册</string>
+    <string name="text_editor_password">修改密码</string>
+    <string name="text_now_password">旧密码</string>
+    <string name="text_new_password">新密码</string>
+    <string name="text_forget_password">忘记密码</string>
+    <string name="desc_text">这个人很懒，什么都没留下。</string>
+    <string name="cancel">取消</string>
+    <string name="photo">图库</string>
+    <string name="take_photo">拍照</string>
+</resources>
