@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
          et_password.setText(ShareUtils.getString(this,"password",""));
         }
 
-        dialog=new CustomDialog(this,100,100,R.layout.dialog_loading,R.style.Theme_dialog, Gravity.CENTER,R.style.pop_anim_style);
+        dialog=new CustomDialog(this,150,150,R.layout.dialog_loading,R.style.Theme_dialog, Gravity.CENTER,R.style.pop_anim_style);
         dialog.setCanceledOnTouchOutside(false);
     }
     @Override

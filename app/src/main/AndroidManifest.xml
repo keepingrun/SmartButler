@@ -54,6 +54,11 @@
         <!--快递查询-->
         <activity android:name=".ui.CourierActivity"
             android:label="快递查询"/>
+        <!--归属地查询-->
+        <activity android:name=".ui.PhoneActivity"
+            android:label="归属地查询"/>
+        <!--新闻详情-->
+        <activity android:name=".ui.WebViewActivity"/>
     </application>
 
 </manifest>

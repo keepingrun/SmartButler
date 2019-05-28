@@ -27,4 +27,5 @@
     <string name="Inquire">查询</string>
     <string name="Courier_company">快递公司</string>
     <string name="Courier_number">快递单号</string>
+    <string name="text_query">查询</string>
 </resources>

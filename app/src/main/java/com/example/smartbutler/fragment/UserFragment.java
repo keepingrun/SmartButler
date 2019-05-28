@@ -26,6 +26,7 @@ import com.example.smartbutler.R;
 import com.example.smartbutler.entity.MyUser;
 import com.example.smartbutler.ui.CourierActivity;
 import com.example.smartbutler.ui.LoginActivity;
+import com.example.smartbutler.ui.PhoneActivity;
 import com.example.smartbutler.utils.L;
 import com.example.smartbutler.utils.ShareUtils;
 import com.example.smartbutler.utils.UtilTools;
@@ -61,7 +62,7 @@ public class UserFragment extends Fragment implements View.OnClickListener{
     private Button btn_cancel;
 
     private TextView tv_courier;
-
+    private TextView tv_phone;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -108,6 +109,9 @@ public class UserFragment extends Fragment implements View.OnClickListener{
 
         tv_courier=view.findViewById(R.id.tv_courier);
         tv_courier.setOnClickListener(this);
+
+        tv_phone=view.findViewById(R.id.tv_phone);
+        tv_phone.setOnClickListener(this);
 
     }
     private void setEnabled(boolean b){
@@ -189,6 +193,9 @@ public class UserFragment extends Fragment implements View.OnClickListener{
                 break;
             case R.id.tv_courier:
                 startActivity(new Intent(getActivity(), CourierActivity.class));
+                break;
+            case R.id.tv_phone:
+                startActivity(new Intent(getActivity(), PhoneActivity.class));
                 break;
         }
     }
