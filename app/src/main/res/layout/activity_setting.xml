@@ -4,12 +4,40 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textSize="30sp"
-        android:text="设置" />
+    android:background="@drawable/setting_bg">
+    <!--语音播报-->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_setting_title_1"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_setting_content_1"
+                android:textColor="@color/color_black"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <Switch
+            android:id="@+id/sw_speak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"/>
+    </LinearLayout>
 
 
 </LinearLayout>

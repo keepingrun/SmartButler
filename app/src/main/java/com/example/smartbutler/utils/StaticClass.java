@@ -19,9 +19,11 @@ public class StaticClass {
     //归属地查询
     public static final String PHONE_KEY="84a2f864177c8e64e34ed05f07e9502f";
     //问答机器人key
-    public static final String CHAT_LIST_KEY="aaaaaaaaaaaaaaaaaaaaaaaa";
+    public static final String CHAT_LIST_KEY="7a48539921338ef90866922b21e25f6d";
     //微信精选key
     public static final String WECHAT_KEY="3e65ca66192eca3928b5518d74198b8b";
     //girl key
     public static final String GIRL_KEY="http://gank.io/api/data/%E7%A6%8F%E5%88%A9/50/1";
+    //讯飞语音key 5ced0430
+    public static final String VOICE_KEY="5ced0430";
 }

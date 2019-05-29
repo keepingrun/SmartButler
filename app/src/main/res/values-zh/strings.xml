@@ -25,4 +25,6 @@
     <string name="Courier_company">快递公司</string>
     <string name="Courier_number">快递单号</string>
     <string name="text_query">查询</string>
+    <string name="text_setting_title_1">语音播报</string>
+    <string name="text_setting_content_1">开启之后与服务管家对讲语音播报</string>
 </resources>
