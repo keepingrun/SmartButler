@@ -26,4 +26,8 @@ public class StaticClass {
     public static final String GIRL_KEY="http://gank.io/api/data/%E7%A6%8F%E5%88%A9/50/1";
     //讯飞语音key 5ced0430
     public static final String VOICE_KEY="5ced0430";
+    //短信action
+    public static final String SMS_ACTION="android.provider.Telephony.SMS_RECEIVER";
+    //检测更新
+    public static final String CHECK_UPDATE_URL="http://192.168.1.110:8080/wuguangcheng/config.json";
 }

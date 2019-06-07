@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.smartbutler.view.DispatchLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/dialog_white_bg"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/tv_phone"
+            android:text="15626141652"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="今天晚上干嘛干嘛"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/btn_send_sms"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:textColor="@android:color/white"
+            android:text="回复"/>
+    </LinearLayout>
+
+
+</com.example.smartbutler.view.DispatchLinearLayout>
