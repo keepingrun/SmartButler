@@ -28,7 +28,7 @@
     <!--读取联系人权限，上传联系人需要用到此权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <!--外存储写权限，构建语法需要用到此权限 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <!--外存储读权限，构建语法需要用到此权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <!--配置权限，用来记录应用配置信息 -->
@@ -38,12 +38,18 @@
     <!--定位信息是敏感信息，可通过Setting.setLocationEnable(false)关闭定位请求 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <!--如需使用人脸识别，还要添加：摄相头权限，拍照需要用到 -->
-    <uses-permission android:name="android.permission.CAMERA" />
+
     <!--短信权限-->
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.SEND_SMS"/>
     <!--窗口权限-->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!--二维码-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" /><!--允许访问振动设备-->
     <application
         android:name=".application.BaseApplication"
         android:allowBackup="true"
@@ -88,6 +94,8 @@
         <!--版本更新活动-->
         <activity android:name=".ui.UpdateActivity"
             android:label="下载更新"/>
+        <activity android:name=".ui.QrCodeActivity"
+            android:label="我的二维码"/>
     </application>
 
 </manifest>

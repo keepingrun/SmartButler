@@ -19,6 +19,7 @@ import com.example.smartbutler.utils.ShareUtils;
 import com.example.smartbutler.utils.StaticClass;
 import com.kymjs.rxvolley.RxVolley;
 import com.kymjs.rxvolley.client.HttpCallback;
+import com.xys.libzxing.zxing.activity.CaptureActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,6 +40,13 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     private int versionCode;
     //下载地址
     private String url;
+    //扫一扫
+    private LinearLayout ll_scan;
+    //扫面的结果
+    private TextView tv_scan_result;
+    //二维码分享
+    private LinearLayout ll_qr_code;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +75,12 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         } catch (PackageManager.NameNotFoundException e) {
             tv_version.setText("检测版本");
         }
+        //扫一扫
+        ll_scan=findViewById(R.id.ll_scan);
+        ll_scan.setOnClickListener(this);
+        tv_scan_result=findViewById(R.id.tv_scan_result);
+        ll_qr_code=findViewById(R.id.ll_qr_code);
+        ll_qr_code.setOnClickListener(this);
     }
 
     @Override
@@ -105,6 +119,14 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                         parsingJson(t);
                     }
                 });
+                break;
+            case R.id.ll_scan:
+                //打开扫描界面扫描条形码或二维码
+                Intent openCameraIntent = new Intent(SettingActivity.this, CaptureActivity.class);
+                startActivityForResult(openCameraIntent, 0);
+                break;
+            case R.id.ll_qr_code:
+                startActivity(new Intent(this,QrCodeActivity.class));
                 break;
         }
     }
@@ -154,5 +176,15 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         PackageInfo info=pm.getPackageInfo(getPackageName(),0);
         versionName=info.versionName;
         versionCode=info.versionCode;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            Bundle bundle = data.getExtras();
+            String scanResult = bundle.getString("result");
+            tv_scan_result.setText(scanResult);
+        }
     }
 }
