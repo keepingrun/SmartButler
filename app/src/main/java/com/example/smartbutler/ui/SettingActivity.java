@@ -46,6 +46,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     private TextView tv_scan_result;
     //二维码分享
     private LinearLayout ll_qr_code;
+    //百度地图
+    private LinearLayout ll_my_location;
     //关于软件
     private LinearLayout ll_about;
     @Override
@@ -85,6 +87,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         //关于软件
         ll_about=findViewById(R.id.ll_about);
         ll_about.setOnClickListener(this);
+        //百度地图
+        ll_my_location=findViewById(R.id.ll_my_location);
+        ll_my_location.setOnClickListener(this);
     }
 
     @Override
@@ -134,6 +139,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.ll_about:
                 startActivity(new Intent(this,AboutActivity.class));
+                break;
+            case R.id.ll_my_location:
+                startActivity(new Intent(this,LocationActivity.class));
                 break;
         }
     }
