@@ -1,6 +1,8 @@
 package com.example.smartbutler.utils;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -49,4 +51,15 @@ public class UtilTools {
             imageView.setImageBitmap(bitmap);
         }
     }
+
+    //获取版本号
+    public static String getVersion(Context mContext){
+        try {
+            PackageInfo info=mContext.getPackageManager().getPackageInfo(mContext.getPackageName(),0);
+            return info.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            return "未知";
+        }
+    }
+
 }

@@ -96,6 +96,9 @@
             android:label="下载更新"/>
         <activity android:name=".ui.QrCodeActivity"
             android:label="我的二维码"/>
+        <!--关于软件-->
+        <activity android:name=".ui.AboutActivity"
+            android:label="关于软件"/>
     </application>
 
 </manifest>

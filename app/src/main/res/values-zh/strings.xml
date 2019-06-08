@@ -36,4 +36,6 @@
     <string name="text_setting_content_4">看看外面的世界</string>
     <string name="text_setting_title_5">二维码分享</string>
     <string name="text_setting_content_5">把自己最美的一面分享给朋友吧</string>
+    <string name="text_setting_title_6">我的位置</string>
+    <string name="text_setting_content_6">时刻掌握自身位置</string>
 </resources>

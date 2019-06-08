@@ -46,7 +46,8 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
     private TextView tv_scan_result;
     //二维码分享
     private LinearLayout ll_qr_code;
-
+    //关于软件
+    private LinearLayout ll_about;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +82,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
         tv_scan_result=findViewById(R.id.tv_scan_result);
         ll_qr_code=findViewById(R.id.ll_qr_code);
         ll_qr_code.setOnClickListener(this);
+        //关于软件
+        ll_about=findViewById(R.id.ll_about);
+        ll_about.setOnClickListener(this);
     }
 
     @Override
@@ -127,6 +131,9 @@ public class SettingActivity extends BaseActivity implements View.OnClickListene
                 break;
             case R.id.ll_qr_code:
                 startActivity(new Intent(this,QrCodeActivity.class));
+                break;
+            case R.id.ll_about:
+                startActivity(new Intent(this,AboutActivity.class));
                 break;
         }
     }
